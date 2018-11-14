@@ -1,0 +1,15 @@
+Following steps have been taken for the upgrade:
+	• Identify Current Jenkins Version
+ 
+cat /var/lib/jenkins/config.xml |grep version
+	• Download New Jenkins War File
+wget updates.jenkins-ci.org/download/war/2.89.4/jenkins.war
+	• Install the New Jenkins War File
+ 
+cp /usr/lib/jenkins/jenkins.war /home/ec2-user/jenkins.war.previous.version
+ 
+ 
+cp /downloads/jenkins.war /usr/lib/jenkins/
+ 
+	• Restart Jenkins
+ 
